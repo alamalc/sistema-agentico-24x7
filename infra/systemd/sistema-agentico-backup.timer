@@ -1,0 +1,11 @@
+[Unit]
+Description=Respaldo diario del sistema agentico
+
+[Timer]
+OnCalendar=*-*-* 03:15:00 America/Santiago
+Persistent=true
+RandomizedDelaySec=10m
+Unit=sistema-agentico-backup.service
+
+[Install]
+WantedBy=timers.target

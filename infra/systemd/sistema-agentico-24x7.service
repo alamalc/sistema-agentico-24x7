@@ -1,0 +1,20 @@
+[Unit]
+Description=Sistema agentico 24x7
+Documentation=https://github.com/OWNER/sistema-agentico-24x7
+After=network-online.target docker.service
+Wants=network-online.target
+Requires=docker.service
+
+[Service]
+Type=simple
+WorkingDirectory=%h/agentic-24x7
+ExecStart=/usr/bin/docker compose --env-file .env up --no-build --remove-orphans worker
+ExecStop=/usr/bin/docker compose down --timeout 20
+Restart=on-failure
+RestartSec=10s
+TimeoutStartSec=120s
+TimeoutStopSec=45s
+NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,31 @@
+{
+  "name": "sistema-agentico-24x7",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24.16.0 <25",
+    "npm": ">=11.13.0 <12"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "doctor": "node scripts/doctor.mjs",
+    "test": "vitest run",
+    "start": "node dist/worker.js",
+    "worker:once": "node dist/worker.js --once",
+    "cli": "node dist/cli.js",
+    "deploy": "bash scripts/deploy.sh",
+    "backup": "bash scripts/backup.sh"
+  },
+  "dependencies": {
+    "pg": "8.23.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "@types/pg": "8.15.6",
+    "typescript": "7.0.2",
+    "vitest": "5.0.3"
+  }
+}

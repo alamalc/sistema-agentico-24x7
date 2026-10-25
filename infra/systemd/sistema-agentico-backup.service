@@ -1,0 +1,10 @@
+[Unit]
+Description=Respaldo logico del sistema agentico
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/agentic-24x7
+Environment=AGENTIC_PROJECT_DIR=%h/agentic-24x7
+ExecStart=%h/agentic-24x7/scripts/backup.sh
+NoNewPrivileges=true
+PrivateTmp=true

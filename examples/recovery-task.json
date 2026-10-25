@@ -1,0 +1,15 @@
+{
+  "objective": "Demostrar que una tarea vuelve a entregarse después de perder un lease y termina con un solo artefacto verificable.",
+  "sourceUrls": [
+    "https://supabase.com/docs/guides/queues"
+  ],
+  "constraints": [
+    "Usar únicamente el proveedor fixture",
+    "No ejecutar escrituras externas",
+    "Conservar evidencia de los dos intentos"
+  ],
+  "maxSteps": 3,
+  "maxOutputTokens": 1000,
+  "deadlineAt": "2026-12-31T23:59:59-03:00",
+  "idempotencyKey": "tutorial-recovery-2026-10-25-v1"
+}

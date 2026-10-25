@@ -1,0 +1,17 @@
+{
+  "objective": "Contrastar la documentación oficial y proponer un despliegue rootless con cola durable, límites de ejecución y una prueba de recuperación.",
+  "sourceUrls": [
+    "https://docs.docker.com/engine/security/rootless/",
+    "https://supabase.com/docs/guides/queues",
+    "https://www.freedesktop.org/software/systemd/man/latest/systemd.service.html"
+  ],
+  "constraints": [
+    "No ejecutar cambios remotos",
+    "Distinguir hechos de recomendaciones",
+    "Citar sólo las URL suministradas"
+  ],
+  "maxSteps": 6,
+  "maxOutputTokens": 2000,
+  "deadlineAt": "2026-12-31T23:59:59-03:00",
+  "idempotencyKey": "tutorial-rootless-2026-10-24-v1"
+}
